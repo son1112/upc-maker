@@ -1,1 +1,90 @@
-../../bin/upc_classes.rb
+class Label
+  attr_accessor :queries, :query_hash, :tex_file
+  attr_reader :created_at
+  attr_writer :owner
+  
+  def initialize(queries)
+    @queries = queries
+    @tex_file = ""
+    @created_at = Time.new
+    @query_hash = {}
+  end
+  
+  def set_query_hash
+    @queries.each do |q|
+      puts "#{q.upcase}?\n"
+      @query_hash[q] = gets.chomp
+      puts ""
+    end
+    puts ""
+  end
+
+  def to_tex_file
+
+    set_query_hash
+    @tex_file = "#{@query_hash['id']}.tex"    
+
+    File.open(@tex_file, "w") do |file|
+
+      file.puts $template_top
+      
+      @query_hash.each do |a,b|
+
+        name = "{\\textsc{#{a.capitalize}}}:     "
+        desc_open = "{\\scriptsize\\textit{"
+        pre = "#{name} #{desc_open}"
+        desc_close = "}}\n\n"
+
+        #file.puts name(a)
+
+        case a
+        when "gauge"
+          file.puts pre + b +
+
+                    "g" +
+
+                    desc_close
+        when "size"
+          file.puts pre + b +
+
+                    "\"" +
+
+                    desc_close
+        when "type"
+          file.puts pre +
+
+                    select($types,b) +
+
+                    desc_close
+        when "material"
+          file.puts pre +
+
+                    select($materials,b) +
+
+                    desc_close
+        when "id"
+          file.puts desc_open +
+
+                    b.upcase +
+
+                    desc_close
+        else
+          file.puts pre + b +
+                    desc_close
+        end
+      end
+
+      file.puts $template_bottom
+    end
+  end
+
+  def select(hash,string)
+    if hash[string]
+      hash[string]
+    else
+      string
+    end
+  end
+
+end
+
