@@ -1,0 +1,72 @@
+* Contents
+  
+  .
+  ├── bin
+  │   ├── upc-maker.rb
+  │   └── upc-sheet-maker.rb
+  ├── lib
+  │   ├── init
+  │   ├── templates
+  │   │   ├── labelsTemplate-top.tex -> labelsTemplate-top.txt
+  │   │   ├── labelsTemplate-top.txt
+  │   │   ├── labelsTemplate.txt
+  │   │   ├── template-bottom.txt
+  │   │   ├── template-top.tex -> template-top.txt
+  │   │   ├── template-top.txt
+  │   │   └── template.txt
+  │   ├── upc_classes -> ../../bin/upc_classes.rb
+  │   └── var.rb
+  ├── pdfs
+  │   ├── labels -> sheets/labels
+  │   ├── sheets
+  │   │   ├── labels
+  │   │   ├── texfiles
+  │   │   └── tmp
+  │   │       ├── 0.tex
+  │   │       ├── 1.tex
+  │   │       ├── 2.tex
+  │   │       ├── sheet_0000.aux
+  │   │       ├── sheet_0000.log
+  │   │       ├── sheet_0000.out
+  │   │       ├── sheet_0000.pdf
+  │   │       ├── sheet_0000.tex
+  │   │       ├── sheet_00010.tex
+  │   │       ├── sheet_00011.tex
+  │   │       ├── sheet_00012.tex
+  │   │       ├── sheet_00013.tex
+  │   │       ├── sheet_00014.tex
+  │   │       ├── sheet_00015.tex
+  │   │       ├── sheet_00016.tex
+  │   │       ├── sheet_00017.tex
+  │   │       ├── sheet_00018.tex
+  │   │       ├── sheet_00019.tex
+  │   │       ├── sheet_0001.aux
+  │   │       ├── sheet_0001.log
+  │   │       ├── sheet_0001.out
+  │   │       ├── sheet_0001.pdf
+  │   │       ├── sheet_0001.tex
+  │   │       ├── sheet_00020.tex
+  │   │       ├── sheet_00021.tex
+  │   │       ├── sheet_00022.tex
+  │   │       ├── sheet_00023.tex
+  │   │       ├── sheet_00024.tex
+  │   │       ├── sheet_00025.tex
+  │   │       ├── sheet_0002.tex
+  │   │       ├── sheet_0003.tex
+  │   │       ├── sheet_0004.tex
+  │   │       ├── sheet_0005.tex
+  │   │       ├── sheet_0006.tex
+  │   │       ├── sheet_0007.tex
+  │   │       ├── sheet_0008.tex
+  │   │       ├── sheet_0009.tex
+  │   │       ├── temp.aux
+  │   │       ├── temp.log
+  │   │       ├── temp.out
+  │   │       └── temp.tex
+  │   └── templates -> ../lib/templates
+  ├── #README.org#
+  ├── samples
+  ├── texfiles
+  └── upc-maker -> bin/upc-maker.rb
+  
+  13 directories, 54 files
