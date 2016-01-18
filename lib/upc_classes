@@ -35,8 +35,8 @@ class Label
         pre = "#{name} #{desc_open}"
         desc_close = "}}\n\n"
 
-        #file.puts name(a)
-
+        #extend conditionals into different template libraries
+        #ie. 'body jewelry' or 'resume' or 'project plan'
         case a
         when "gauge"
           file.puts pre + b +
@@ -64,6 +64,8 @@ class Label
                     desc_close
         when "id"
           file.puts desc_open +
+
+                    "CJ" +
 
                     b.upcase +
 

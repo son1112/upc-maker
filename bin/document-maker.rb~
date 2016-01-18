@@ -1,0 +1,25 @@
+#!/usr/bin/ruby
+
+def item_template
+  puts "Please choose: "
+  puts "1) Labels 2) Resume"
+  puts ""
+
+  sel = gets.chomp.to_i
+
+  type = case sel
+         when 1
+           "labels"
+         when 2
+           "resume"
+         end
+
+  return type
+end
+
+def item_prod_num
+  type = item_template
+  
+  puts "How many #{type.capitalize}?\n"
+  return gets.chomp.to_i
+end
